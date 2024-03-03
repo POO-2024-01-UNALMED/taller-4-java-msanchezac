@@ -7,6 +7,11 @@ public class Grupo {
     public Asignatura asignatura;
     public final int codigo;
     public String horario;
+    
+    public Grupo(){
+    	this.codigo = 0;
+    	this.horario ="";	
+    }
 
     public Grupo(Persona[] estudiantes, Persona profesor, Asignatura asignatura, int codigo, String horario) {
         this.estudiantes = estudiantes;
@@ -31,9 +36,6 @@ public class Grupo {
         this.asignatura = asignatura;
         this.codigo = 0;
     }
-    
-    public Grupo() {
-    	this.codigo = 0;}
 
     void cambiarEstudiante(Persona estudianteViejo, Persona estudianteNuevo) {
         for (int i = 0; i < estudiantes.length; i++) {
